@@ -1,8 +1,2 @@
-/home / 301
-/index / 301
-/pricing /pricing.html 301
-/how-it-works /how-it-works.html 301
-/contact /contact.html 301
-/privacy /privacy.html 301
-/terms /terms.html 301
-/security /security.html 301
+# Clean HTML routes are handled by Cloudflare's static-assets routing.
+# Keep this file rule-free so Pages and Workers do not create redirect loops.
