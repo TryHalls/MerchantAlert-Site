@@ -12,6 +12,12 @@ const expectedPages = [
   "security.html",
   "404.html"
 ];
+const deploymentFiles = [
+  "wrangler.site.jsonc",
+  ".assetsignore",
+  "src/site-worker.js",
+  ".github/workflows/deploy-cloudflare.yml"
+];
 
 const failures = [];
 
@@ -29,6 +35,20 @@ for (const file of expectedPages) {
     if (!href || href.startsWith("#") || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) continue;
     const target = href.split("?")[0].split("#")[0].replace(/^\//, "");
     if (target && !existingFiles.has(target)) failures.push(`${file}: broken local link ${href}`);
+  }
+}
+
+for (const file of deploymentFiles) {
+  try {
+    const source = await readFile(new URL(file, root), "utf8");
+    if (file === "wrangler.site.jsonc" && (!source.includes('"assets"') || !source.includes('"ASSETS"'))) {
+      failures.push(`${file}: missing static-assets configuration`);
+    }
+    if (file.endsWith("deploy-cloudflare.yml") && (!source.includes("CLOUDFLARE_API_TOKEN") || !source.includes("CLOUDFLARE_ACCOUNT_ID"))) {
+      failures.push(`${file}: missing owner-controlled Cloudflare secrets`);
+    }
+  } catch {
+    failures.push(`${file}: missing deployment file`);
   }
 }
 
