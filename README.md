@@ -55,3 +55,5 @@ Read these in order:
 5. [Decision log](docs/decision-log.md)
 
 The privacy and terms pages are explicit drafts until the owner supplies the real controller identity, contact details, jurisdictions, processing design, billing rules, and legal review.
+
+The Search Console sitemap is prepared as [a domain-neutral template](docs/sitemap.xml.template); publish it only after replacing the placeholder with the approved HTTPS domain.
