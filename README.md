@@ -52,7 +52,8 @@ Read these in order:
 2. [Google Merchant API path](docs/google-merchant-api-path.md)
 3. [Manual outreach playbook](docs/outreach-playbook.md)
 4. [First pilot plan](docs/first-pilot-plan.md)
-5. [Decision log](docs/decision-log.md)
+5. [Readiness matrix](docs/readiness-matrix.md)
+6. [Decision log](docs/decision-log.md)
 
 The privacy and terms pages are explicit drafts until the owner supplies the real controller identity, contact details, jurisdictions, processing design, billing rules, and legal review.
 
