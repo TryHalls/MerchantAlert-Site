@@ -1,14 +1,6 @@
 /*
-  Static security baseline for Cloudflare Pages.
-  Review CSP when a real form endpoint, analytics, or payment provider is
-  intentionally added. The current site has no third-party runtime scripts.
-*/
-/*
-  /
-    X-Content-Type-Options: nosniff
-    Referrer-Policy: strict-origin-when-cross-origin
-    Permissions-Policy: camera=(), microphone=(), geolocation=()
-    X-Frame-Options: DENY
-    Content-Security-Policy: default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'; frame-ancestors 'none'
-*/
-
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'; frame-ancestors 'none'

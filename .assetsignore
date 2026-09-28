@@ -1,0 +1,12 @@
+.*
+docs/**
+scripts/**
+src/**
+node_modules/**
+*.md
+*.json
+*.jsonc
+*.mjs
+*.log
+_headers
+_redirects

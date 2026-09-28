@@ -28,15 +28,19 @@ Edit [site-config.js](site-config.js) only when the following are real and contr
 
 Do not commit API keys, OAuth secrets, service-account files, payment credentials, identity documents, or legal documents to this repository.
 
-## Cloudflare Pages deployment
+## Cloudflare deployment
 
-The site is plain static HTML. In Cloudflare Pages, use:
+The primary hosting path is Cloudflare Pages. In Cloudflare Pages, use:
 
 - Production branch: `main`
 - Build command: `exit 0`
 - Build output directory: `.`
 
 Cloudflare’s official static HTML guide documents this setup and provides a `*.pages.dev` preview URL. Connect a custom domain only after the owner controls the domain and is ready to publish the legal and contact details.
+
+This repository also includes a Workers Static Assets fallback in `wrangler.site.jsonc`. It is isolated from the MerchantAlert backend Worker, applies the same security headers in `src/site-worker.js`, and can be deployed with `npm run deploy:cloudflare` when Pages project creation is unavailable in the account.
+
+Current public validation preview: <https://merchantalert-site.tryhalls.workers.dev/>. This is an owner-account preview hostname, not a substitute for the final controlled domain.
 
 ## Launch gates
 
@@ -48,4 +52,3 @@ Read these in order:
 4. [Decision log](docs/decision-log.md)
 
 The privacy and terms pages are explicit drafts until the owner supplies the real controller identity, contact details, jurisdictions, processing design, billing rules, and legal review.
-

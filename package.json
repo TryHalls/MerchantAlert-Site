@@ -5,7 +5,7 @@
   "description": "Public website and launch documentation for MerchantAlert.",
   "scripts": {
     "test": "node scripts/check-site.mjs",
-    "preview": "python3 -m http.server 4173 --directory ."
+    "preview": "python3 -m http.server 4173 --directory .",
+    "deploy:cloudflare": "npx --yes wrangler deploy --config wrangler.site.jsonc"
   }
 }
-

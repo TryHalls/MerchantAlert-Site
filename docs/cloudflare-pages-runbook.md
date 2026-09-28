@@ -27,6 +27,20 @@ Only do this when the owner controls the domain and has approved publishing the 
 
 See [Cloudflare custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/) for the current flow.
 
+## Workers Static Assets fallback
+
+If Pages project creation is unavailable, this repository has a separate static-assets Worker configuration. It uses `wrangler.site.jsonc`, serves only the public site files selected by `.assetsignore`, and applies security headers in `src/site-worker.js`.
+
+```bash
+npm run deploy:cloudflare
+```
+
+Cloudflare documents Workers Static Assets as the current recommended way to deploy a purely static site. The deployed preview is on the account’s `*.workers.dev` subdomain unless the owner later attaches a controlled custom domain.
+
+See [Workers Static Assets](https://developers.cloudflare.com/workers/static-assets/) and [Workers Static Assets getting started](https://developers.cloudflare.com/workers/static-assets/get-started/).
+
+The current deployed validation preview is <https://merchantalert-site.tryhalls.workers.dev/>. It is intentionally not used as the final Merchant Center business domain.
+
 ## Post-deploy validation
 
 ```bash
@@ -42,4 +56,3 @@ Replace `OWNER_DOMAIN` locally with the real domain; do not commit it here until
 3. complete Search Console verification with the owner’s token or file;
 4. add a real sitemap URL to `robots.txt` only after the canonical domain is confirmed;
 5. run `npm test` and redeploy.
-
