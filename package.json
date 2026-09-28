@@ -1,0 +1,11 @@
+{
+  "name": "merchantalert-site",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Public website and launch documentation for MerchantAlert.",
+  "scripts": {
+    "test": "node scripts/check-site.mjs",
+    "preview": "python3 -m http.server 4173 --directory ."
+  }
+}
+

@@ -1,0 +1,5 @@
+# This file is intentionally conservative until the owner connects a real
+# domain and Search Console property. Add a Sitemap line at launch.
+User-agent: *
+Allow: /
+
