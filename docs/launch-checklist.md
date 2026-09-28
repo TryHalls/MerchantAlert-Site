@@ -2,7 +2,7 @@
 
 This checklist is the handoff between the public site lane and owner-controlled external setup. It is deliberately explicit so no one mistakes a coded page for a completed legal, Google, or billing prerequisite.
 
-Status at 2026-09-28: website code is ready for review; external owner actions are pending.
+Status at 2026-09-28: website code is ready and a public validation preview is deployed at https://merchantalert-site.tryhalls.workers.dev/; external owner actions are pending.
 
 ## 1. Publish a truthful public presence
 
@@ -61,4 +61,3 @@ Before accepting money, the owner must decide:
 ## Current launch decision
 
 The site should be treated as a public validation asset until Sections 1–3 are complete. It is safe to review the copy and design now, but it must not imply that Merchant API is already connected, that a business entity is already verified, or that payment is already available.
-
