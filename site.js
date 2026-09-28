@@ -28,6 +28,18 @@
     });
   }
 
+  if (document.body?.dataset.page === "home" && !document.querySelector('script[type="application/ld+json"]')) {
+    const schema = document.createElement("script");
+    schema.type = "application/ld+json";
+    schema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "MerchantAlert",
+      url: `${siteUrl || window.location.origin}/`
+    });
+    document.head.appendChild(schema);
+  }
+
   document.querySelectorAll("[data-contact-link]").forEach((link) => {
     const email = String(config.contactEmail || "").trim();
     if (email) {
@@ -84,4 +96,3 @@
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
 })();
-
