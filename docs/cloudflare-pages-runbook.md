@@ -41,6 +41,17 @@ See [Workers Static Assets](https://developers.cloudflare.com/workers/static-ass
 
 The current deployed validation preview is <https://merchantalert-site.tryhalls.workers.dev/>. It is intentionally not used as the final Merchant Center business domain.
 
+## Optional GitHub Actions deployment
+
+The repository contains a manual-only workflow at `.github/workflows/deploy-cloudflare.yml`. Before using it, the owner must add these GitHub Actions secrets:
+
+- `CLOUDFLARE_ACCOUNT_ID`
+- `CLOUDFLARE_API_TOKEN`
+
+The token should be scoped only to the account and Worker deployment required for this site. Do not commit or paste its value into the repository, issues, pull requests, or chat. Start the workflow manually after reviewing the change.
+
+Cloudflare’s [GitHub Actions guide](https://developers.cloudflare.com/workers/ci-cd/external-cicd/github-actions/) documents the non-interactive account-ID and API-token model and recommends storing both as CI/CD secrets.
+
 ## Post-deploy validation
 
 ```bash

@@ -42,6 +42,8 @@ This repository also includes a Workers Static Assets fallback in `wrangler.site
 
 Current public validation preview: <https://merchantalert-site.tryhalls.workers.dev/>. This is an owner-account preview hostname, not a substitute for the final controlled domain.
 
+The repository includes a manual-only [Cloudflare deploy workflow](.github/workflows/deploy-cloudflare.yml). It remains inactive until the owner adds `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` as GitHub Actions secrets, then starts it with `workflow_dispatch`.
+
 ## Launch gates
 
 Read these in order:
