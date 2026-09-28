@@ -1,112 +1,88 @@
-# Asynchronous first-user playbook
+# Asynchronous validation channels
 
-The owner does not want sales calls, demos, or personal prospect conversations. Validation must therefore happen asynchronously, through channels where product feedback/self-promotion is explicitly permitted or where people opt in to engage.
+Last checked: 28 September 2026.
 
-## Primary audience
+This note records channels that can be used without cold email, calls, demos, or direct personal prospecting by the owner. Platform rules change, so re-check them immediately before any post.
 
-Prioritise:
+## Channel priority
 
-1. Small ecommerce/PPC agencies that actively manage Shopify + Google Shopping / Merchant Center for multiple clients.
-2. Shopify merchants already spending meaningfully on Google Shopping or Performance Max.
-3. Operators who can describe recurring Merchant Center issue triage as an operational problem.
+### 1. r/ShopifyApps — primary
 
-Avoid broad audiences that mainly need feed creation, catalog editing, bid management, or general SEO.
+Current moderator guidance explicitly allows developers to share apps or validate app ideas.
 
-## Legal and platform constraint
+Relevant rules currently state:
 
-Do not default to unsolicited commercial email.
+- one promo or idea-validation post per month per developer;
+- be transparent about the relationship to the app;
+- use the required app-promo / idea-validation template;
+- do not spam unrelated threads.
 
-For Spain/EU operation, promotional email and equivalent electronic communications must respect LSSI Article 21 and its consent/existing-customer rules. This repository therefore treats cold email as out of scope for the validation sprint unless a lawful basis and exact workflow are separately approved.
+This is the strongest current permissioned channel because the audience is directly about Shopify apps and the rules explicitly allow validation.
 
-Do not scrape contact lists, automate bulk DMs, or hide the builder relationship.
+Source:
+https://www.reddit.com/r/ShopifyApps/comments/1p28k3m/welcome_to_rshopifyapps_read_before_posting_get/
 
-## Preferred validation channels
+### 2. Shopify Community — Ask and Offer — conditional
 
-Use only channels whose current rules permit the intended behavior.
+Shopify's Community Guidelines currently say that the Ask and Offer board may be used to post general information about an app/service or solicit feedback.
 
-- **r/ShopifyApps**: its current developer guidance explicitly allows app sharing and idea validation, with one promo/validation post per month per developer and a required structured template. This is the best current fit for a public validation post.
-- **Shopify Community — Ask and Offer**: Shopify's current Community Guidelines say this board may be used for general information about an app/service or to solicit feedback. However, the same guidelines say AI-produced content is highly discouraged, so do not publish generated copy there without a genuine human review/edit.
-- **Indie Hackers**: acceptable as a secondary founder-feedback channel, especially for landing-page/idea feedback, but it is not the target-customer channel and should not be treated as demand proof by itself.
+Important constraints:
 
-Avoid r/Shopify and r/ecommerce for direct app promotion unless their current rules explicitly allow the exact post; their moderation rules are restrictive and account-gated.
+- unsolicited/self-promotional mentions outside that board are restricted;
+- generic templated messages are not allowed;
+- taking conversations private without mutual consent is discouraged;
+- AI-produced content is highly discouraged.
 
-## Validation questions
+Because of that last rule, generated copy should not be posted there verbatim. Treat this as optional unless the final text receives a genuine human edit.
 
-A public validation post should make it easy to answer in writing:
+Source:
+https://community.shopify.com/guidelines
 
-- How do you notice a new Merchant Center issue today?
-- Does anyone on your team manually check Merchant Center?
-- When many products are affected, do clicks/impressions change what you fix first?
-- Would a read-only alerting layer be useful if it did not touch feeds or products?
-- If useful, would this be a store-level purchase or something an agency would want across accounts?
+### 3. Indie Hackers — secondary only
 
-No call is required. Public comments or asynchronous replies are sufficient.
+Indie Hackers has long tolerated respectful product-feedback and landing-page-feedback posts, but the audience is primarily founders rather than Shopify merchants/agencies.
 
-## Agency-facing draft
+Use it to learn about positioning and clarity, not as primary proof of willingness to pay from the target market.
 
-> I am validating MerchantAlert, a narrow monitoring tool for Shopify stores using Google Merchant Center.
->
-> The premise is: detect new disapprovals or visibility limitations without relying on someone manually checking Merchant Center, then prioritise the affected products using recent clicks/impressions where the match is deterministic.
->
-> It is read-only. It does not rewrite feeds, edit products, or promise to fix Google policy issues.
->
-> I am specifically trying to learn whether agencies that manage multiple Shopify + Google Shopping accounts see this as a recurring operational problem.
->
-> Written feedback is enough:
-> 1. How do you notice these issues today?
-> 2. Is manual Merchant Center checking still part of the workflow?
-> 3. Would traffic-aware prioritisation change what gets fixed first?
-> 4. Would you test this across one or more client accounts if the integration were ready?
->
-> No credentials, exports, client data, or meeting required.
+Relevant examples:
+https://www.indiehackers.com/post/product-promotion-on-ih-67c946c95e
+https://www.indiehackers.com/post/how-to-ask-for-landing-page-feedback-and-actually-get-it-4b91058639
 
-## Merchant-facing draft
+## Channels not selected for direct validation
 
-> I am validating a small Shopify + Google Merchant Center monitoring product.
->
-> The idea is to alert when product status changes or visibility is limited, then surface the affected products that were actually receiving traffic first. It is intentionally not a feed manager and does not edit your catalog.
->
-> I am trying to understand whether this solves a real problem before building anything else.
->
-> If you manage Google Shopping for a Shopify store, written feedback on these would help:
-> 1. How do you currently notice Merchant Center problems?
-> 2. Have you ever discovered a disapproval/limitation later than you wanted?
-> 3. Would ranking affected products by recent clicks/impressions be useful?
-> 4. Would you consider a paid pilot if the integration were read-only?
->
-> No login, store access, call, or sensitive data needed.
+### r/Shopify
 
-## What counts as evidence
+Current moderation is restrictive and account-gated. Do not use it for direct product promotion unless current rules explicitly allow the exact post at posting time.
 
-Count:
+### r/ecommerce
 
-- a target user describing the problem in their own words;
-- explicit written interest in trying a pilot;
-- explicit willingness to pay or a plausible price reaction;
-- an agency willing to test on more than one real client account;
-- repeated objections that reveal a better wedge.
+Current rules require account-age and karma thresholds and are designed to suppress promotional behavior. Do not use it as a launch shortcut.
 
-Do not count:
+### Cold email
 
-- generic founder compliments;
-- likes/upvotes without target-user context;
-- comments from people outside the target workflow;
-- traffic to the landing page by itself.
+Do not use unsolicited commercial email as the default validation channel. Spain/EU operation must respect Article 21 of the LSSI and its consent / existing-customer framework.
 
-## Decision rule
+Official source:
+https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758
 
-Do not buy a domain, start paid acquisition, or add major product features just because a post gets attention.
+## First public experiment
 
-Proceed to owner spend only after at least one of:
+The first external experiment should be **one transparent idea-validation post in r/ShopifyApps**.
 
-- 2+ serious written pilot candidates at a plausible paid price;
-- 1 agency willing to test with multiple real client accounts;
-- repeated explicit willingness-to-pay around the monitoring workflow.
+The post should:
 
-If a meaningful sample of qualified, permissioned exposure produces no problem recognition or pilot intent, reassess positioning or pivot instead of polishing the product.
+- identify MerchantAlert as a product being validated;
+- state the Shopify + Google Merchant Center problem clearly;
+- describe only capabilities that already exist or are technically prepared;
+- say it is read-only and does not edit feeds/products;
+- ask for written feedback in public comments;
+- require no call, DM, credentials, store access, or client data;
+- ask whether the respondent would test a paid pilot when the integration is ready.
 
-## Sources checked 28 September 2026
+Success is not upvotes. Success is target users describing the pain, expressing pilot intent, or giving credible price reactions.
 
-- Shopify Community Guidelines: https://community.shopify.com/guidelines
-- r/ShopifyApps developer rules/template: https://www.reddit.com/r/ShopifyApps/comments/1p28k3m/welcome_to_rshopifyapps_read_before_posting_get/
-- LSSI consolidated text, Article 21: https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758
+## Account / posting dependency
+
+Publishing on Reddit requires an account and acceptance of Reddit's terms, and may trigger login, CAPTCHA, email verification, or other owner-only actions.
+
+Those are legitimate human boundaries. The owner should not be asked to conduct sales conversations after posting; written public responses can be handled asynchronously where tools permit.
